@@ -74,8 +74,34 @@ Web server or local environment (live server) to serve the HTML, CSS, JS, and au
 
 ### Implementation
 For Software:
+Installation and Setup Steps
+Ensure you have the following project structure:
+/project-root
+  ├── index.html      (main webpage)
+  ├── style.css       (complex, animated styling)
+  ├── script.js       (JavaScript for prank logic)
+  ├── audio1.mp3      (prank audio file 1)
+  ├── audio2.mp3      (prank audio file 2)
+  ├── audio3.mp3      (prank audio file 3)
+  └── audio4.mp3      (prank audio file 4)
+Place your chosen prank audio clips named exactly as above in the same folder.
+
+To serve and test the app locally, use a live server environment like the VS Code Live Server extension or run a local HTTP server:
+# If you have Python installed, you can quickly serve files with:
+python3 -m http.server 8000
+
+# Then open in browser:
+http://localhost:8000
+
+Open your browser (Chrome recommended for best Web Audio support) and navigate to the served page.
+
+Click the Start Listening button. The app will request microphone access and simulate live listening volume in the UI.
+
+Press the button again to stop listening; it will then wait 3 seconds before playing a randomly selected prank audio clip.
+
+While a prank audio is playing, pressing Start Listening again will immediately stop playback and restart the mic listening.
+
 # Installation
-[commands]
 
 # Run
 [commands]
@@ -84,59 +110,17 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
++
+website interface
+<img width="1920" height="1080" alt="Screenshot (5)" src="https://github.com/user-attachments/assets/d90c5c97-b455-4211-98b7-c8b04289d219" />
 
-<img width="1920" height="1080" alt="Screenshot (4)" src="https://github.com/user-attachments/assets/7117137b-e27a-49dd-8adb-0a9cb4a0f5e4" />
-*AV BCFVBws*
+working
+<img width="1920" height="1080" alt="Screenshot (7)" src="https://github.com/user-attachments/assets/6c9fcca8-c141-49fe-bdf6-b157fa70efe7" />
 
-
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
+<img width="1920" height="1080" alt="Screenshot (10)" src="https://github.com/user-attachments/assets/c7921bbe-76b1-4979-b701-13c956c0cef8" />
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
-
-## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
-
----
-Made with ❤️ at TinkerHub Useless Projects 
-
-![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
-![Static Badge](https://img.shields.io/badge/UselessProjects--25-25?link=https%3A%2F%2Fwww.tinkerhub.org%2Fevents%2FQ2Q1TQKX6Q%2FUseless%2520Projects)
-
+Working of the project
+https://github.com/user-attachments/assets/eca8d71d-1c39-4a9f-b218-da1567a238ca
 
