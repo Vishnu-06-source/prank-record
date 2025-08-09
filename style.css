@@ -1,0 +1,129 @@
+/* ===== Background animated gradient ===== */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #00c6ff, #0072ff);
+  background-size: 400% 400%;
+  animation: gradientShift 3s ease infinite;
+  color: #e3e4e6;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ===== Glassmorphic centered container ===== */
+.container {
+  background: rgba(255, 255, 255, 0.11);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25),
+              0 0 15px rgba(0,0,0,0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 3rem 2.2rem 2.4rem;
+  width: 95%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Heading ===== */
+#main-title {
+  font-size: 2.2rem;
+  margin: 0 0 1.6rem 0;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 10px rgba(0,198,255,0.30);
+  line-height: 1.16;
+  width: 100%;
+  text-align: center;
+}
+
+/* ===== Main button styling ===== */
+#toggle-btn {
+  display: block;
+  margin: 0 auto 1.7rem;
+  padding: 1rem 3rem;
+  font-size: 1.13rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(145deg, #00d2ff, #3a7bd5);
+  color: #ffffff;
+  box-shadow:
+    0 4px 20px rgba(0, 210, 255, 0.65),
+    inset 0 -3px 7px rgba(0, 174, 255, 0.22),
+    inset 0 3px 5px rgba(255, 255, 255, 0.68);
+  transition: 
+    box-shadow 0.22s,
+    background 0.28s, 
+    transform 0.14s;
+}
+
+#toggle-btn:hover {
+  background: linear-gradient(145deg, #00baff, #0072ff);
+  box-shadow: 0 8px 25px #00e5ff88;
+  transform: scale(1.045);
+}
+
+#toggle-btn:active {
+  transform: scale(0.97);
+}
+
+/* ===== Status area under button ===== */
+#status {
+  margin-top: 0.7rem;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: #eef3f4;
+  text-shadow: 0 0 7px #00e5ff, 0 0 12px #00e5ff;
+  min-height: 28px;
+  white-space: pre-line;  /* ✅ allows \n for multi-lines */
+  word-break: break-word;
+  letter-spacing: 0.01em;
+  width: 100%;
+  text-align: center;
+  padding: 0.3rem 0;
+}
+
+/* ===== Listening dots animation ===== */
+.listening::after {
+  content: '';
+  animation: listeningDots 1s steps(3, end) infinite;
+}
+
+@keyframes listeningDots {
+  0% { content: ''; }
+  33% { content: '.'; }
+  66% { content: '..'; }
+  100% { content: '...'; }
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+  #main-title {
+    font-size: 1.6rem;
+  }
+  #toggle-btn {
+    font-size: 1rem;
+    padding: 0.85rem 1.7rem;
+  }
+  #status {
+    font-size: 1rem;
+  }
+}
